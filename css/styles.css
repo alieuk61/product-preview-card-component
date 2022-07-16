@@ -1,0 +1,168 @@
+body{
+  background-color: hsl(30, 38%, 92%);
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  text-align: left;
+  display: grid;
+
+}
+
+h1{
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+h2{
+  font-family: 'Fraunces', sans-serif;
+  margin: 0;
+  font-size: 1.8rem;
+  color: hsl(158, 36%, 37%);
+}
+
+h4{
+  color: hsl(228, 12%, 48%);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  letter-spacing: 5px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h6{
+  font-family: 'Montserrat', sans-serif;
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+  margin-top: 0;
+  margin-left: 25px;
+  margin-top: 10px;
+}
+
+.perfume-desc{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.container{
+  height: 450px; /*with pixels it allows the screen to be more resposive as opposed to percentages*/
+  width: 600px;
+  /* position: relative;
+  left: 430px;
+  top: 140px; */
+  border-radius: 10px;
+  display: flex;
+  /* overflow: hidden; /*it either cuts off excess content that goes past a div or it adds scrollers to be able to fit it in a div, not needed here though*/
+   /*this helped me make the edges of the container curved as it cut off the edges that wasnt in the div when i added a border radius*/
+   /* margin: auto; */ /*since the containers parent (body) display flex or grid, margin auto will allow the container to be centered*/
+   position: absolute;
+   inset: 0;
+   margin: auto;
+}
+
+.left-div{
+  height: 100%; /*height is 100% of the adult div*/
+  width: 50%;
+}
+
+img{
+  height: 100%; /*height is 100% of the adult div*/
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+
+.right-div{
+  height: 100%;
+  width: 50%;
+  background-color: white;
+  box-sizing: border-box; /*this will allow you to put padding in a div without the div getting bigger*/
+  padding: 30px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.cost-section{
+  margin-top: 0;
+}
+
+.prices{
+  flex: 1;
+}
+
+
+.price-texts{
+  height: 50px;
+  display: flex;
+  margin-bottom: 4px;
+}
+
+.div-one{
+  flex: 1;
+}
+
+.div-two{
+  flex: 1;
+  margin-left: auto;
+}
+
+button{
+  background-color: hsl(158, 36%, 37%);
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 15px 5px;
+  color: white;
+}
+
+.attribution{
+  height: max-content;
+  width: max-content; /*takes up only the space of the content*/
+  align-self: end; /*it moves itself and not the contents inside of it to the centre of the y axis*/
+  justify-self: center; /*it moves itself and not the contents inside of it to the centre of the x axis*/
+}
+
+/* MEDIA QUERY */
+@media (max-width: 600px) {
+  body{
+    height: auto;
+    width: auto;
+  }
+
+  .container{
+    flex-flow: column;
+    margin: auto;
+    height: 300px;
+    width: 650px;
+    margin: 0;
+    }
+
+  .left-div{
+
+  }
+
+  .right-div{
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 10px;
+  }
+
+  img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+    height: 300px;
+  }
+
+  .attribution{
+    position: absolute;
+    right: auto;
+    top: 600px;
+  }
+}
